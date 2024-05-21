@@ -20,6 +20,7 @@
             background: url('tanzanite.jpg') no-repeat center center fixed;
             background-size: cover;
             color: white;
+            overflow: hidden;
         }
 
         .overlay {
@@ -38,34 +39,97 @@
             background: rgba(0, 0, 0, 0.7);
             padding: 40px;
             border-radius: 10px;
+            max-width: 90%;
+        }
+
+        .content h1 {
+            font-weight: bold;
+            font-size: 80px;
+            font-family: sans-serif;
+            line-height: 1em
+        }
+
+        .content p {
+            color: deepskyblue;
+            font-weight: normal;
+            font-size: 40px;
         }
 
         .logo {
             display: flex;
             position: absolute;
             align-items: center;
-            margin-bottom: 20px;
-            top: 2px;
-            left: 5px;
+            top: 10px;
+            left: 10px;
         }
 
         .logo img {
             width: 200px;
             height: auto;
-            margin-right: 10px;
         }
 
         .social-icons {
             position: absolute;
-            font-size: 2.0em;
-            bottom: 0;
+            font-size: 2em;
+            bottom: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
         }
-
 
         .social-icons a {
             color: white;
             margin: 0 10px;
             text-decoration: none;
+            align-content: center;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                padding: 20px;
+                max-width: 95%;
+            }
+
+            .content h1 {
+                font-size: 40px;
+            }
+
+            .content p {
+                font-size: 20px;
+            }
+
+            .logo img {
+                width: 150px;
+            }
+
+            .social-icons {
+                font-size: 1.5em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .content {
+                padding: 10px;
+                max-width: 100%;
+            }
+
+            .content h1 {
+                font-size: 40px;
+            }
+
+            .content p {
+                font-size: 20px;
+            }
+
+            .logo img {
+                width: 100px;
+            }
+
+            .social-icons {
+                font-size: 1em;
+            }
         }
     </style>
 </head>
@@ -73,21 +137,22 @@
 <div class="overlay">
     <div class="logo">
         <img src="sban.png" alt="Logo">
-<!--        <h1>S-BAN</h1>-->
     </div>
     <div class="content">
-        <h1 style="font-weight: bold; font-size: 80px; font-family: sans-serif; line-height: 1em">Website under<br>maintenance...</h1>
-        <p style="color: deepskyblue; font-weight: normal; font-size: 40px;">We are currently making enhancements to
+        <h1>Website under<br>maintenance...</h1>
+        <p>We are currently making enhancements to
             ensure<br>that you have the best possible experience.</p>
     </div>
 
     <div class="social-icons">
-        <a href="https://www.linkedin.com/company/serengeti-angels/" target="_blank">
-            <i class="fa-brands fa-linkedin"></i>
-        </a>
-        <a href="https://www.instagram.com/serengeti_angels/" target="_blank">
-            <i class="fa-brands fa-instagram"></i>
-        </a>
+        <div>
+            <a href="https://www.linkedin.com/company/serengeti-angels/" target="_blank">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="https://www.instagram.com/serengeti_angels/" target="_blank">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+        </div>
         <p>@ Serengeti Angels</p>
     </div>
 </div>
